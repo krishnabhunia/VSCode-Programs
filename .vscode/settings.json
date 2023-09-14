@@ -1,3 +1,8 @@
 {
-    "git.enableCommitSigning": false
+    "git.enableCommitSigning": false,
+    "python.testing.pytestArgs": [
+        "venvKri"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

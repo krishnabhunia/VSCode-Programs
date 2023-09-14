@@ -1,6 +1,6 @@
 import pytest
 
-def test_check():
+def test():
     var = 10
     assert var == 1
     assert var == 2

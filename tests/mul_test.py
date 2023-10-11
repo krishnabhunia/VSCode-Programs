@@ -1,13 +1,13 @@
 import multiprocessing as mp
 import time
-def test(res = 0):
+def test_che(res = 0):
     print("Test start with res = ", res)
     time.sleep(res)
     print("Test stop")
 
 def check():
     try:
-        proc = mp.Process(target=test,args=([10]))
+        proc = mp.Process(target=test_che,args=([10]))
         proc.start()
         proc.join(timeout=3)
         if proc.is_alive():

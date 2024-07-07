@@ -6,6 +6,6 @@ def convert_pdf_to_docx(pdf_file, docx_file):
     cv.close()
 
 # Example usage
-pdf_file = 'path/to/your/file.pdf'
-docx_file = 'path/to/your/file.docx'
+pdf_file = r'/Users/krishna/Documents/convert to docx/Rahul Kendre for conversion.pdf'
+docx_file = r'/Users/krishna/Documents/convert to docx/Rahul Kendre for conversion.docx'
 convert_pdf_to_docx(pdf_file, docx_file)

@@ -1,11 +1,13 @@
 {
+    "git.enableCommitSigning": false,
     "python.testing.unittestArgs": [
         "-v",
         "-s",
-        "./venvKri",
+        "./tests",
         "-p",
-        "test_*.py"
+        "*test*.py"
     ],
     "python.testing.pytestEnabled": false,
-    "python.testing.unittestEnabled": true
+    "python.testing.unittestEnabled": true,
+    "python.testing.autoTestDiscoverOnSaveEnabled": true
 }

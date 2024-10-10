@@ -1,18 +1,15 @@
-from pandas import Timestamp
-import datetime
+import datetime as dt
+import pandas as pd
 
-import timestamp
-import timezones
-
-t = datetime.datetime.now()
+# Get the current datetime
+t = dt.datetime.now()
 print(t)
 
-
-# Create a Timestamp object
-timestamp = Timestamp(datetime.datetime.now(), tz='UTC')
+# Create a Timestamp object using pandas with timezone
+ts = pd.Timestamp(dt.datetime.now(), tz='UTC')
 
 # Format the Timestamp as a string
-formatted_timestamp = timestamp.strftime('%Y-%m-%d %H:%M:%S.%f%z')
+formatted_timestamp = ts.strftime('%Y-%m-%d %H:%M:%S.%f%z')
 
 print(formatted_timestamp)
-print(timestamp)
+print(ts)

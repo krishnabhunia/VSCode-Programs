@@ -16,7 +16,7 @@ print(r)
 import re
 
 def my_sort(x):
-    if isinstance(x, str) and re.search(r'\d', x):
+    if isinstance(x, str) and x.isalnum():
         return (1, x)  # Numbers get category 0
     elif isinstance(x, str):
         return (0, x)  # Alphanumerics get category 1

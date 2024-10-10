@@ -1,8 +1,0 @@
-pandas
-numpy
-pytest
-nltk
-isort
-autopep8
-mypy
-flake8

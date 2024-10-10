@@ -20,6 +20,13 @@
 # If you're wondering how this is created, it is generated using
 # `scripts/generate.py` in https://github.com/pypa/get-pip.
 
+from base64 import b85decode
+import tempfile
+import shutil
+import pkgutil
+import os.path
+import importlib
+import argparse
 import sys
 
 this_python = sys.version_info[:2]
@@ -28,19 +35,11 @@ if this_python < min_version:
     message_parts = [
         "This script does not work on Python {}.{}".format(*this_python),
         "The minimum supported Python version is {}.{}.".format(*min_version),
-        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(*this_python),
+        "Please use https://bootstrap.pypa.io/pip/{}.{}/get-pip.py instead.".format(
+            *this_python),
     ]
     print("ERROR: " + " ".join(message_parts))
     sys.exit(1)
-
-
-import argparse
-import importlib
-import os.path
-import pkgutil
-import shutil
-import tempfile
-from base64 import b85decode
 
 
 def include_setuptools(args):

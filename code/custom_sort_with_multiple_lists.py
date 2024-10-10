@@ -1,6 +1,8 @@
 import re
 
 r = []
+
+
 def check_lst(lst):
     if type(lst) == list:
         for i in lst:
@@ -9,11 +11,14 @@ def check_lst(lst):
             else:
                 r.append(i)
 
-inp = ["Sam", [10.987, [2.0, ["Hi", 39]], "Hello12345"], [[[56, 10.345678, ["He!!0"]]]]]
+
+inp = ["Sam", [10.987, [2.0, ["Hi", 39]], "Hello12345"],
+       [[[56, 10.345678, ["He!!0"]]]]]
 
 check_lst(inp)
 print(inp)
 print(r)
+
 
 def my_sort(x):
     if isinstance(x, str) and x.isalnum():
@@ -24,7 +29,8 @@ def my_sort(x):
         return (2, x)  # Pure strings get category 2
     elif isinstance(x, float):
         return (3, x)  # Pure strings get category 2
-    
+
+
 s = sorted(r, key=my_sort)
 print(s)
 

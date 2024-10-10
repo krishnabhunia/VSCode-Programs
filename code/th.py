@@ -19,14 +19,16 @@ def t2(d2):
 
 def t3():
     try:
-        th1 = threading.Thread(target=t1, name="krishna", args=("krishna data",))
+        th1 = threading.Thread(target=t1, name="krishna",
+                               args=("krishna data",))
         print("thread starting")
         th1.start()
         print("thread started, and will run")
         th1.join(timeout=5)
         print("thread joined and killed")
 
-        th2 = threading.Thread(target=t2, name="dipayan", args=("dipayan data",))
+        th2 = threading.Thread(target=t2, name="dipayan",
+                               args=("dipayan data",))
         print("thread starting")
         th2.start()
         print("thread started, and will run")

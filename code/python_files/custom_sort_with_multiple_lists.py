@@ -1,12 +1,10 @@
-import re
-
 r = []
 
 
 def check_lst(lst):
-    if type(lst) == list:
+    if type(lst) is list:
         for i in lst:
-            if type(i) == list:
+            if type(i) is list:
                 check_lst(i)
             else:
                 r.append(i)

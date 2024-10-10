@@ -5,7 +5,8 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 nltk.download('stopwords')
 
 stop_words = set(stopwords.words('english'))
-text = "I am Krishna Bhunia, a Senior Software Engineer and Data Scientist and Engineer with expertise on machine learning and NLP"
+text = "I am Krishna Bhunia, a Senior Software Engineer and Data Scientist and /
+    Engineer with expertise on machine learning and NLP"
 
 tokenized_text = nltk.tokenize.sent_tokenize(text)
 print(f"Tokenized text {tokenized_text}")

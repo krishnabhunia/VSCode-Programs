@@ -20,14 +20,14 @@
 # If you're wondering how this is created, it is generated using
 # `scripts/generate.py` in https://github.com/pypa/get-pip.
 
-from base64 import b85decode
-import tempfile
-import shutil
-import pkgutil
-import os.path
-import importlib
 import argparse
+import importlib
+import os.path
+import pkgutil
+import shutil
 import sys
+import tempfile
+from base64 import b85decode
 
 this_python = sys.version_info[:2]
 min_version = (3, 7)

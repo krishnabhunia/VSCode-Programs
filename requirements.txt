@@ -10,3 +10,4 @@ flake8
 pysocks
 nlp
 spacy
+torch

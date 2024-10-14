@@ -9,13 +9,11 @@ FROM employees;
 
 
 /*
-
-employee_id	department	salary	dense_rank	rank	row_num	quartile
-1	HR	        90000	    1	      1	        1	      1
-2	HR	        85000	    2	      2	        2	      1
-3	HR	        85000	    2	      2	        3	      2
-4	HR	        75000	    3	      4	        4	      2
-5	Sales	    100000	    1	      1	        1	      1
-6	Sales	    95000	    2	      2	        2	      1
-
+employee_id       department       salary       dense_rank       rank       row_num       quartile
+    1                  HR   	   90000              1            1           1              1
+    2                  HR   	   85000              2            2           2              1
+    3                  HR   	   85000              2            2           3              2
+    4                  HR   	   75000              3            4           4              2
+    5                  Sales       10000              1            1           1              1
+    6                  Sales       95000              2            2           2              1
 */

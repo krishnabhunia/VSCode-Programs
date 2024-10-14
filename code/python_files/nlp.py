@@ -1,4 +1,5 @@
 import spacy
+
 print("\nSimilarity Starts")
 # Load the pre-trained model with word vectors
 nlp = spacy.load("en_core_web_md")

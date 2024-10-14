@@ -1,2 +1,6 @@
 venv_kri/
 tests/
+venv_kri_vscode/
+.env
+*.ipynb_checkpoints/
+.ipynb_checkpoints/

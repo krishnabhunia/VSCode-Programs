@@ -8,3 +8,5 @@ autopep8
 mypy
 flake8
 pysocks
+nlp
+spacy

@@ -4,3 +4,7 @@ tests/
 .env
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.vscode/

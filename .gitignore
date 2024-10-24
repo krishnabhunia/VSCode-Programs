@@ -1,6 +1,11 @@
 venv_kri/
+.venv_kri/
 venv_kri_vscode/
 tests/
 .env
 *.ipynb_checkpoints/
 .ipynb_checkpoints/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.vscode/

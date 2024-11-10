@@ -1,0 +1,15 @@
+# capture all library in requirement txt file
+pipdeptree --freeze --warn silence | grep -E '^[a-zA-Z0-9\-_]+' > requirements.txt
+
+#execute docker mongodb in container
+docker run -d --name mongodb-container -p 27017:27017 mongo
+
+#execute FastAPI server
+uvicorn app.main:app --reload
+
+#Kill port in linux if occupied by VSCode
+sudo lsof -i :8000
+kill -9 <PID>
+
+# to stop mongodb
+net stop MongoDB

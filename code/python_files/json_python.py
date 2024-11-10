@@ -1,4 +1,4 @@
-import json
+import json as js
 
 raw_data = {
     "patients": [

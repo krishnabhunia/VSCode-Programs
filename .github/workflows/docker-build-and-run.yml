@@ -1,0 +1,35 @@
+name: Docker Build and Deploy
+
+on:
+  push:
+    branches:
+      - main  # Trigger on pushes to the main branch
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build Docker Image
+      run: docker build -t custom-sql-server -f docker/mssql.Dockerfile .
+
+    - name: Push Docker Image (Optional)
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASS: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+        docker tag custom-sql-server username/custom-sql-server:latest
+        docker push username/custom-sql-server:latest
+
+    - name: Run Docker Container
+      run: |
+        docker stop my-custom-sql-server || true
+        docker rm my-custom-sql-server || true
+        docker run -d --name my-custom-sql-server -p 1433:1433 custom-sql-server

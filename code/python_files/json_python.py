@@ -53,19 +53,21 @@ raw_data = {
     ]
 }
 
+# Extracting maximum claim amount for each patient
+max_claims = {}
+for patient in raw_data['patients']:
+    patient_id = patient['patient_id']
+    max_claim = max(claim['claim_amount'] for claim in patient['claims'])
+    max_claims[patient_id] = max_claim
 
-def search_json(data, key):
-    for i in data:
-        print(type(i), i)
-        print(type(data[i]), data[i])
-        if data[i] is list:
-            for j in data[i]:
-                print(type(j), j)
-                print(type(j[i]), j[i])
-                if j[i] == key:
-                    return j
-                else:
-                    return search_json(j, key)
+print(max_claims)
 
 
-print(search_json(raw_data, 'P001'))
+patient_input = 'P002'
+max_claim = None
+for patient in raw_data['patients']:
+    if patient['patient_id'] == patient_input:
+        max_claim = max(claim['claim_amount'] for claim in patient['claims'])
+        break
+
+print(f"Maximum claim amount for patient {patient_input}: {max_claim}")

@@ -1,5 +1,5 @@
 # Use the official Microsoft SQL Server image from the Docker Hub
-FROM mcr.microsoft.com/mssql/server:2019-latest
+FROM mcr.microsoft.com/mssql/server:2022-latest
 
 # Set environment variables
 ENV ACCEPT_EULA=Y

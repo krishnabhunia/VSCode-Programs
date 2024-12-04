@@ -12,4 +12,4 @@ for last in range(len(inp)):
         maxlen = last - first + 1
         maxstr = inp[first:last+1]
 
-print(f"The max string is : '{maxstr}' having len : {maxlen}")
+print(f"Longest unique substring : '{maxstr}' having Length : {maxlen}")

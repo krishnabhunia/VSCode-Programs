@@ -1,5 +1,6 @@
 venv_kri/
 .venv_kri/
+.venv_test/
 venv_kri_vscode/
 tests/
 .env

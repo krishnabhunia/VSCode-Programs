@@ -12,3 +12,4 @@ nlp
 spacy
 torch
 torchvision
+pre-commit

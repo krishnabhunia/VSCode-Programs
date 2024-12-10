@@ -13,3 +13,5 @@ spacy
 torch
 torchvision
 pre-commit
+python-dotenv
+selenium
